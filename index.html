@@ -9,44 +9,56 @@
         integrity="sha384-G++pO/TtP6SeNEBuO/CYuppmlcEhA0Rj9IcY5feVJXhyYraEA8CKVZV38iDXLTyJ"
         crossorigin="anonymous"></script>
     <script type="module" src="script.js" defer></script>
-    <style></style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="app">
         <main>
+            <div id="container">
 
-            <nav id="search-bar">
-                <img src="" alt="magnifying glass">
-                <input type="search" placeholder="Sök efter rätt...">
-            </nav>
+                <nav id="search-bar">
+                    <img src="" alt="magnifying glass">
+                    <input type="search" placeholder="Sök efter rätt...">
+                </nav>
 
-            <div id="preferences-container">
-                <white-block-component>
-                    <dropdown-preference-component label="Måltidstyp"></dropdown-preference-component>
-                </white-block-component>
+                <div id="preference-container">
+                    <white-block-component>
+                        <dropdown-preference-component label="Måltidstyp"></dropdown-preference-component>
+                    </white-block-component>
+
+                    <white-block-component>
+                        <dropdown-preference-component label="Tema"></dropdown-preference-component>
+                    </white-block-component>
+
+                    <white-block-component>
+                        <dropdown-preference-component label="Allergier"></dropdown-preference-component>
+                    </white-block-component>
+                    <white-block-component>
+
+                        <dropdown-preference-component label="Kost"></dropdown-preference-component>
+                    </white-block-component>
+
+                    <white-block-component></white-block-component>
+                    <white-block-component></white-block-component>
 
 
 
 
-                <white-block-component></white-block-component>
-                <white-block-component></white-block-component>
-                <white-block-component></white-block-component>
-                <white-block-component></white-block-component>
-                <white-block-component></white-block-component>
+
+
+
+
+
+
+
+                </div>
+
+                <button id="search-button">Starta sökning</button>
             </div>
-
-
-
-
-
-
-
-            <div id="ingredients-container"></div>
-            <button id="search-button"></button>
-
         </main>
     </div>
+    
 
 </body>
 
