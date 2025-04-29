@@ -39,8 +39,29 @@
                         <dropdown-preference-component label="Kost"></dropdown-preference-component>
                     </white-block-component>
 
-                    <white-block-component></white-block-component>
-                    <white-block-component></white-block-component>
+                    <white-block-component>
+
+                        <div class="range-input-container">
+                            <label for="range-slider"> Pris per portion: {{ label }} </label>
+                            <div id="range-value"> 100kr {{ price }} </div>
+                            <input v:model type="range" id="range-slider">
+                        </div>
+
+                    </white-block-component>
+
+                    <white-block-component>
+
+                        <div class="portion-count-container">
+                            <label for="portion-preference">Antal portioner:</label>
+                            <input type="text" class="portion-preference" placeholder="Ange...">
+                            <label for="">Kan frysas</label>
+                            <input type="checkbox" class="portion-preference">
+                            <label for="">Kan förlagas</label>
+                            <input type="checkbox" class="portion-preference">
+
+                        </div>
+
+                    </white-block-component>
 
 
 
