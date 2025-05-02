@@ -98,13 +98,12 @@ body {
 .selected-options {
     background-color: #FCE1AF;
     width: fit-content;
-    padding: .1rem .5rem .1rem 1rem;
+    padding: .2rem .5rem .3rem 1rem;
     border-radius: 1rem;
     display: flex;
     gap: .5rem;
     color: #333333;
     font-size: 12px;
-
     
 }
 

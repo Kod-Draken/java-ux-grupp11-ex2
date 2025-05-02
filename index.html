@@ -25,19 +25,28 @@
 
                 <div id="preference-container">
                     <white-block-component>
-                        <dropdown-preference-component label="Måltidstyp"></dropdown-preference-component>
+                        <preference-component label="Måltidstyp">
+                            <dropdown-preference-component></dropdown-preference-component>
+                        </preference-component>
+
                     </white-block-component>
 
                     <white-block-component>
-                        <dropdown-preference-component label="Tema"></dropdown-preference-component>
+                        <preference-component label="Tema">
+                            <dropdown-preference-component></dropdown-preference-component>
+                        </preference-component>
                     </white-block-component>
 
                     <white-block-component>
-                        <dropdown-preference-component label="Allergier"></dropdown-preference-component>
+                        <preference-component label="Allergier">
+                            <dropdown-preference-component></dropdown-preference-component>
+                        </preference-component>
                     </white-block-component>
                     <white-block-component>
 
-                        <dropdown-preference-component label="Kost"></dropdown-preference-component>
+                        <preference-component label="Kost">
+                            <dropdown-preference-component></dropdown-preference-component>
+                        </preference-component>
                     </white-block-component>
 
                     <white-block-component>
@@ -66,7 +75,7 @@
 
 
 
-        
+
 
 
 
@@ -76,21 +85,25 @@
 
                 </div>
                 <div id="ingredients-container">
-                    
+
                     <h4>Ingredienser</h4>
-                    
+
                     <div id="temp-container">
 
                         <white-block-component>
                             <div>
-                                <dropdown-preference-component label="Inkludera"></dropdown-preference-component>
+                                <preference-component label="Inkludera">
+                                    <search-preference-component></search-preference-component>
+                                </preference-component>
                             </div>
-    
+
                         </white-block-component>
-    
+
                         <white-block-component>
                             <div>
-                                <dropdown-preference-component label="Exkludera"></dropdown-preference-component>
+                                <preference-component label="Exkludera">
+                                    <search-preference-component></search-preference-component>
+                                </preference-component>
                             </div>
                         </white-block-component>
 
@@ -101,7 +114,7 @@
             </div>
         </main>
     </div>
-    
+
 
 </body>
 
