@@ -62,8 +62,8 @@ body {
     width: 16.5rem;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
-    /* CHECK THIS OUT, WE WANT PERFECT GAPS BETWEEN THESE BOXES BOTH VERTICALLY AND HORIZONTALLY */
+    gap: .5rem
+   
 }
 
 .dropdown-preference-component {
@@ -87,12 +87,17 @@ body {
     padding: .2rem .625rem;
     color: gray;
 }
-.dropdown-selector {
-    color: black;
-}
+
 
 .dropdown-selector select {
     display: none;
+}
+
+.small-searchfield {
+    border: 0;
+    background-color: #F2F2F2;
+    padding: .2rem .625rem;
+    border-radius: .625rem;
 }
 
 .selected-options {

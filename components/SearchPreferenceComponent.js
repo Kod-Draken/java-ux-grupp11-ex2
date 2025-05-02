@@ -4,7 +4,7 @@ export default {
       // eg select, search, etc. that way we can make it display components modular
       template:
           `
-          <input type="text" class="portion-preference" placeholder="Ange...">
+          <input type="search" class="small-searchfield" placeholder="Sök...">
   
           `
   }

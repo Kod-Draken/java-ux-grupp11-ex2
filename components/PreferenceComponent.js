@@ -5,8 +5,9 @@ export default {
     template:
             `
         <div class="title-dropdown-container">
-            <label for="1"> 
-                {{ label }}  </label>
+            <label> 
+                {{ label }}
+            </label>
             
             <slot></slot>               
                 
