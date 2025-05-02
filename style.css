@@ -30,6 +30,16 @@ body {
     gap: .62rem;
 }
 
+#ingredients-container {
+    display: flex; 
+    flex-direction: column;
+}
+
+#temp-container {
+    display: flex;
+    flex-direction: row;
+}
+
 .white-block-component {
     background-color: #FFFFFF;
     padding: .81rem .94rem;
