@@ -1,5 +1,5 @@
 export default {
-    props: ['label','data'],
+    props: ['label'],
     data() {
         return {
             selectedOptions: []
@@ -17,7 +17,7 @@ export default {
                 {{ label }}
             </label>
             
-            <slot data='data'></slot>               
+            <slot :onSelect="handleSelect"></slot>               
                 
         </div>
 
