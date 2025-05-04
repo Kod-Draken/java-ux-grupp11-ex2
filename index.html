@@ -25,8 +25,8 @@
 
                 <div id="preference-container">
                     <white-block-component>
-                        <preference-component label="Måltidstyp">
-                            <dropdown-preference-component></dropdown-preference-component>
+                        <preference-component label="Måltidstyp" :data="mealTypeOptions">
+                            <dropdown-preference-component :options="mealTypeOptions" @select="onSelect"></dropdown-preference-component>
                         </preference-component>
                     </white-block-component>
 

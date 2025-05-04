@@ -4,7 +4,11 @@ import PreferenceComponent from './components/PreferenceComponent.js'
 import SearchPreferenceComponent from './components/SearchPreferenceComponent.js'
 
 const app = {
-
+      data() {
+            return {
+                  mealTypeOptions: ['Frukost', 'Lunch', 'Middag', 'Efterrätt']
+            }
+      }
 }
 
 const vueApp = Vue.createApp(app)

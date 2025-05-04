@@ -1,14 +1,16 @@
 export default {
-    props: ['label'],
-    // Lets add a prop for input-type
-    // eg select, search, etc. that way we can make it display components modular
+    props: ['options'],
+    methods: {
+        onSelect(event) {
+            this.$emit('select', event.target.value);
+        }
+    },
     template:
         `
-        <select name="" class="dropdown-selector" id="1">
-            <option value="0" class="select">Välj...</option>
-            <option value="1">option 1</option>
-            <option value="2">option 2</option>
-            <option value="3">option 3</option>
+        <select name="" class="dropdown-selector" id="">
+            <option disabled selected>Välj...</option>
+            <option v-for="opt in options"> {{ opt }} </option>
+            
         </select>
 
         `

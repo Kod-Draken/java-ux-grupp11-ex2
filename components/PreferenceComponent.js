@@ -1,7 +1,15 @@
 export default {
-    props: ['label'],
-    // Lets add a prop for input-type
-    // eg select, search, etc. that way we can make it display components modular
+    props: ['label','data'],
+    data() {
+        return {
+            selectedOptions: []
+        }
+    },
+    methods: {
+        handleSelect(value) {
+            this.selectedOptions.push(value)
+        }
+    },
     template:
             `
         <div class="title-dropdown-container">
@@ -9,13 +17,13 @@ export default {
                 {{ label }}
             </label>
             
-            <slot></slot>               
+            <slot data='data'></slot>               
                 
         </div>
 
         <div>
-            <div class="selected-options">
-            <label for="remove-button">selected option</label>
+            <div class="selected-options" v-for="opt in selectedOptions">
+                <label> {{ opt }} </label>
                 <input class="remove-button"  type="image" src="assets/close.svg" alt="remove">
             </div>
         </div>
