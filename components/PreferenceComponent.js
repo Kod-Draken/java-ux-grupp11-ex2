@@ -7,6 +7,9 @@ export default {
     },
     methods: {
         handleSelect(value) {
+            if (this.selectedOptions.includes(value)){
+                return
+            }
             this.selectedOptions.push(value)
         }
     },

@@ -19,7 +19,7 @@ body {
     width: 100%;
 }
 
-#sear-bar input::before input::highlight {
+#search-bar input::active {
     border: 0;
 }
 
@@ -40,10 +40,10 @@ body {
 }
 
 #ingredients-container {
-    display: flex; 
+    display: flex;
     flex-direction: column;
 
-    > h4 {
+    >h4 {
         padding: 0;
         margin: 0;
         padding-bottom: .5rem;
@@ -63,7 +63,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: .5rem
-   
 }
 
 .dropdown-preference-component {
@@ -96,8 +95,18 @@ body {
 .small-searchfield {
     border: 0;
     background-color: #F2F2F2;
-    padding: .2rem .625rem;
+    padding: .2rem 0;
     border-radius: .625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-searchfield input {
+    border: 0;
+    background-color: #F2F2F2;
+    width: 80%;
+
 }
 
 .selected-option-container {
@@ -117,7 +126,15 @@ body {
     gap: .5rem;
     color: #333333;
     font-size: 12px;
-    
+
+}
+
+#include-ingredients-container .selected-option {
+    background-color: #CDDFA6;
+}
+
+#exclude-ingredients-container .selected-option {
+    background-color: #FCC2AF;
 }
 
 #search-button {
