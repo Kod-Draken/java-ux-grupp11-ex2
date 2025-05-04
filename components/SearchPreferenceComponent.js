@@ -1,10 +1,22 @@
 export default {
-      props: ['label'],
-      // Lets add a prop for input-type
-      // eg select, search, etc. that way we can make it display components modular
-      template:
-          `
-          <input type="search" class="small-searchfield" placeholder="Sök...">
+    data() {
+        return {
+            keyword: "",
+        }
+    },
+    methods: {
+        addFilter() {
+            this.$emit('keyword', this.keyword)
+            this.keyword = "";
+        }
+    },
+    props: ['label'],
+    template:
+        `
+            <div class="small-searchfield">
+                <img src="assets/sök.svg" alt="magnifying glass">
+                <input type="search" placeholder="Sök..." @keyup.enter="addFilter" v-model="keyword">
+            </div>
   
           `
-  }
+}
