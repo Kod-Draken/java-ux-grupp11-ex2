@@ -94,8 +94,10 @@
 
                         <white-block-component>
                             <div>
-                                <preference-component label="Inkludera">
-                                    <search-preference-component></search-preference-component>
+                                <preference-component label="Inkludera" id="include-ingredients-container">
+                                    <template v-slot:default="{ onSelect }">
+                                        <search-preference-component @keyword="onSelect"/>
+                                    </template>
                                 </preference-component>
                             </div>
 
@@ -103,9 +105,10 @@
 
                         <white-block-component>
                             <div>
-                                <preference-component label="Exkludera">
-                                    <search-preference-component>
-                                    </search-preference-component>
+                                <preference-component label="Exkludera" id="exclude-ingredients-container">
+                                    <template v-slot:default="{ onSelect }">
+                                        <search-preference-component @keyword="onSelect"/>
+                                    </template>
                                 </preference-component>
                             </div>
                         </white-block-component>
