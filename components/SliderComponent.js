@@ -1,18 +1,32 @@
 export default {
-    mounted() {
-        // console.log('Dropdown options:', this.options);
+    data() {
+        return {
+
+            price: 0,
+            maxPrice: 3000,
+
+        }
     },
-    // props: ['options'],
-    methods: {
-        // onSelect(event) {
-        //     this.$emit('selected', event.target.value)
-        // },
+    props: ['label'],
+    computed: {
+        sliderStyle() {
+            const percentage = (this.price / this.maxPrice) * 100;
+            return {
+                background: `linear-gradient(to right, #112643 ${percentage}%, #F2F2F2 ${percentage}%)`
+            };
+        }
     },
     template:
         `
-        <div>
+            <div class="range-input-container">
 
-        </div>
+                <div class="price-info">
+                    <label for="range-slider"> {{ label }} </label>
+                    <p>{{price}}</p>
+                </div>
 
+                <input v-model="price" type="range" id="range-slider" min="0" max="3000" :style="sliderStyle">
+
+            </div>
         `
 }
