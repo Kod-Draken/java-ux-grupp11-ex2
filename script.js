@@ -6,7 +6,10 @@ import SearchPreferenceComponent from './components/SearchPreferenceComponent.js
 const app = {
       data() {
             return {
-                  mealTypeOptions: ['Frukost', 'Lunch', 'Middag', 'Efterrätt']
+                  mealTypeOptions: ['Frukost', 'Lunch', 'Middag', 'Efterrätt'],
+                  mealThemes: ['Grekisk', 'Indisk', 'Medelhavet', 'Husmanskost'],
+                  allergies: ['Nötter', 'Bildäck', 'Laktos', 'Gluten'],
+                  diets: ['Vegerarisk', 'Vegan', 'Plastdiet']
             }
       }
 }

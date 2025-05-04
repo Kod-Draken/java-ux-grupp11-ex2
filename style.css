@@ -100,7 +100,15 @@ body {
     border-radius: .625rem;
 }
 
-.selected-options {
+.selected-option-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: .5rem;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.selected-option {
     background-color: #FCE1AF;
     width: fit-content;
     padding: .2rem .5rem .3rem 1rem;

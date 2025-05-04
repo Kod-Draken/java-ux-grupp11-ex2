@@ -24,27 +24,41 @@
                 </nav>
 
                 <div id="preference-container">
+
                     <white-block-component>
-                        <preference-component label="Måltidstyp">
-                            <dropdown-preference-component :options="mealTypeOptions" @select="onSelect"></dropdown-preference-component>
+                        <preference-component label="Måltidstyp" :data="mealTypeOptions">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @selected="onSelect"></dropdown-preference-component>
+                            </template>
+                        </preference-component>
+                    </white-block-component>
+
+
+                    <white-block-component>
+                        <preference-component label="Tema" :data="mealThemes">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @selected="onSelect"></dropdown-preference-component>
+                            </template>
                         </preference-component>
                     </white-block-component>
 
                     <white-block-component>
-                        <preference-component label="Tema">
-                            <dropdown-preference-component></dropdown-preference-component>
+                        <preference-component label="Allergier" :data="allergies">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @selected="onSelect"></dropdown-preference-component>
+                            </template>
                         </preference-component>
                     </white-block-component>
 
                     <white-block-component>
-                        <preference-component label="Allergier">
-                            <dropdown-preference-component></dropdown-preference-component>
-                        </preference-component>
-                    </white-block-component>
-
-                    <white-block-component>
-                        <preference-component label="Kost">
-                            <dropdown-preference-component></dropdown-preference-component>
+                        <preference-component label="Kost" :data="diets">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @selected="onSelect"></dropdown-preference-component>
+                            </template>
                         </preference-component>
                     </white-block-component>
 
@@ -73,7 +87,7 @@
                     </white-block-component>
 
                 </div>
-                
+
                 <div id="ingredients-container">
 
                     <h4>Ingredienser</h4>
