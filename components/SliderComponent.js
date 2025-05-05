@@ -22,7 +22,7 @@ export default {
 
                 <div class="price-info">
                     <label for="range-slider"> {{ label }} </label>
-                    <p>{{price}}</p>
+                    <div id="price-tag">{{price}} kr</div>
                 </div>
 
                 <input v-model="price" type="range" id="range-slider" min="0" max="3000" :style="sliderStyle">
