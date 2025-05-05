@@ -13,12 +13,12 @@ main {
 
 button {
     cursor: pointer;
-    
+
 }
 
 button:hover {
     filter: brightness(98%);
-  }
+}
 
 #search-bar {
     display: flex;
@@ -171,7 +171,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
-.range-input-container>.price-info> #price-tag {
+.range-input-container>.price-info>#price-tag {
     display: flex;
     width: 71px;
     height: 20px;
@@ -205,20 +205,39 @@ button:hover {
 
 }
 
-#sorting-bar {
+#sorting-header {
     display: flex;
 }
 
-#sorting-button-container {
-    display: flex;
-    padding-left: 2rem;
+.section-title {
+    white-space: nowrap;
+    width: 5rem;
+    font-size: small;
+}
+
+#sorting-grid,
+#summary-grid {
+    margin-left: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    align-items: center;
+    width: 100%;
+    font-size: small;
+}
+
+#sorting-grid > *,
+#summary-grid > * {
+    justify-self: center;
 }
 
 .sorting-button {
-    border: 0;
-    border-radius: .5rem;
-
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font: inherit;
 }
 
 .sorting-button:hover {
@@ -232,13 +251,20 @@ depending on clicks, click 1 is arrow down, click 2 is arrow up. */
     background-color: #E1E1E1;
 }
 
+.matching-recipes {
+    display: flex;
+}
+
+.recipe {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
 .recipe-summary {
     display: flex;
     background-color: #FCE1AF;
-    padding: 1rem;
     border-radius: 1rem 1rem 0 0;
-
-    div {
-        align-items: baseline;
-    }
+    padding: .5rem;
 }

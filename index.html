@@ -96,7 +96,7 @@
                             <div>
                                 <preference-component label="Inkludera" id="include-ingredients-container">
                                     <template v-slot:default="{ onSelect }">
-                                        <search-preference-component @keyword="onSelect"/>
+                                        <search-preference-component @keyword="onSelect" />
                                     </template>
                                 </preference-component>
                             </div>
@@ -107,7 +107,7 @@
                             <div>
                                 <preference-component label="Exkludera" id="exclude-ingredients-container">
                                     <template v-slot:default="{ onSelect }">
-                                        <search-preference-component @keyword="onSelect"/>
+                                        <search-preference-component @keyword="onSelect" />
                                     </template>
                                 </preference-component>
                             </div>
@@ -119,9 +119,11 @@
                 <button id="search-button">Starta sökning</button>
             </div>
             <div id="container">
-                <nav id="sorting-bar">
-                    Sortera efter:
-                    <div id="sorting-button-container">
+                <nav id="sorting-header">
+                    <div class="section-title">
+                        Sortera efter:
+                    </div>
+                    <div id="sorting-grid">
                         <button class="sorting-button">
                             Förberedningstid
                             <img src="assets/sortera.svg" alt="sortera">
@@ -139,34 +141,40 @@
                             <img src="assets/sortera.svg" alt="sortera">
                         </button>
                     </div>
+
+
                 </nav>
-            </div>
-            <div class="container">
-                <div class="matching-recipe">
-                    <details>
+
+                <div class="matching-recipes">
+                    <details class="recipe">
                         <summary class="recipe-summary">
-                            Maträtt 1
-                            <div>
-                                <img src="assets/klocka.svg" alt="klocka">
-                                Under 30 min
-                                {{ time }}
+                            <div class="section-title">
+                                Maträtt 1
                             </div>
-                            <div>
-                                <img src="assets/level.svg" alt="komplexitet 2">
-                            </div>
-                            <div>
-                                {{ price }}
-                                140
-                                kr/p
-                            </div>
-                            <div>
-                                {{ margin }}
-                                30
-                                % VM
+                            <div id="summary-grid">
+                                <div>
+                                    <img src="assets/klocka.svg" alt="klocka">
+                                    Under 30 min
+                                    {{ time }}
+                                </div>
+                                <div>
+                                    <img src="assets/level.svg" alt="komplexitet 2">
+                                </div>
+                                <div>
+                                    {{ price }}
+                                    140
+                                    kr/p
+                                </div>
+                                <div>
+                                    {{ margin }}
+                                    30
+                                    % VM
+                                </div>
                             </div>
                         </summary>
                         <div class="recipe-details">
                             <img src="" alt="">
+                            These are the details for the recipe
                         </div>
                     </details>
 
