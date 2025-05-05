@@ -29,7 +29,7 @@
                         <preference-component label="Måltidstyp" :data="mealTypeOptions">
                             <template v-slot:default="{ onSelect, options }">
                                 <dropdown-preference-component :options="options"
-                                    @selected="onSelect"></dropdown-preference-component>
+                                    @select="onSelect"></dropdown-preference-component>
                             </template>
                         </preference-component>
                     </white-block-component>
@@ -39,7 +39,7 @@
                         <preference-component label="Tema" :data="mealThemes">
                             <template v-slot:default="{ onSelect, options }">
                                 <dropdown-preference-component :options="options"
-                                    @selected="onSelect"></dropdown-preference-component>
+                                    @select="onSelect"></dropdown-preference-component>
                             </template>
                         </preference-component>
                     </white-block-component>
@@ -48,7 +48,7 @@
                         <preference-component label="Allergier" :data="allergies">
                             <template v-slot:default="{ onSelect, options }">
                                 <dropdown-preference-component :options="options"
-                                    @selected="onSelect"></dropdown-preference-component>
+                                    @select="onSelect"></dropdown-preference-component>
                             </template>
                         </preference-component>
                     </white-block-component>
@@ -57,7 +57,7 @@
                         <preference-component label="Kost" :data="diets">
                             <template v-slot:default="{ onSelect, options }">
                                 <dropdown-preference-component :options="options"
-                                    @selected="onSelect"></dropdown-preference-component>
+                                    @select="onSelect"></dropdown-preference-component>
                             </template>
                         </preference-component>
                     </white-block-component>
@@ -72,13 +72,26 @@
 
                     <white-block-component>
 
-                        <div class="portion-count-container">
-                            <label for="portion-preference">Antal portioner:</label>
-                            <input type="text" id="portion-preference" class="small-searchfield" placeholder="Ange...">
-                            <label for="">Kan frysas</label>
-                            <input type="checkbox" class="portion-preference">
-                            <label for="">Kan förlagas</label>
-                            <input type="checkbox" class="portion-preference">
+                        <div id="portion-count-container">
+
+                            <div id="portions">
+                                <label for="portion-preference">Antal portioner:</label>
+                                <input type="text" id="portion-preference" class="small-searchfield"
+                                    placeholder="Ange...">
+                            </div>
+
+                            <div id="checkboxes">
+
+                                <div id="frozen">
+                                    <input type="checkbox" class="portion-preference">
+                                    <label for="">Kan frysas</label>
+                                </div>
+
+                                <div id="precooked">
+                                    <input type="checkbox" class="portion-preference">
+                                    <label for="">Kan förlagas</label>
+                                </div>
+                            </div>
 
                         </div>
 
@@ -96,7 +109,7 @@
                             <div>
                                 <preference-component label="Inkludera" id="include-ingredients-container">
                                     <template v-slot:default="{ onSelect }">
-                                        <search-preference-component @keyword="onSelect"/>
+                                        <search-preference-component @keyword="onSelect" />
                                     </template>
                                 </preference-component>
                             </div>
@@ -107,7 +120,7 @@
                             <div>
                                 <preference-component label="Exkludera" id="exclude-ingredients-container">
                                     <template v-slot:default="{ onSelect }">
-                                        <search-preference-component @keyword="onSelect"/>
+                                        <search-preference-component @keyword="onSelect" />
                                     </template>
                                 </preference-component>
                             </div>
