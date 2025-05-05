@@ -23,7 +23,7 @@
                     <input type="search" placeholder="Sök efter rätt...">
                 </nav>
 
-                <div id="preference-container">
+                <div class="preference-container">
 
                     <white-block-component>
                         <preference-component label="Måltidstyp" :data="mealTypeOptions">
@@ -92,7 +92,7 @@
 
                     <h4>Ingredienser</h4>
 
-                    <div id="temp-container">
+                    <div class="preference-container">
 
                         <white-block-component>
                             <div>
@@ -119,6 +119,60 @@
                 </div>
 
                 <button id="search-button">Starta sökning</button>
+            </div>
+            <div id="container">
+                <nav id="sorting-bar">
+                    Sortera efter:
+                    <div id="sorting-button-container">
+                        <button class="sorting-button">
+                            Förberedningstid
+                            <img src="assets/sortera.svg" alt="sortera">
+                        </button>
+                        <button class="sorting-button">
+                            Komplexitet
+                            <img src="assets/sortera.svg" alt="sortera">
+                        </button>
+                        <button class="sorting-button">
+                            Pris
+                            <img src="assets/sortera.svg" alt="sortera">
+                        </button>
+                        <button class="sorting-button">
+                            Vinstmarginal
+                            <img src="assets/sortera.svg" alt="sortera">
+                        </button>
+                    </div>
+                </nav>
+            </div>
+            <div class="container">
+                <div class="matching-recipe">
+                    <details>
+                        <summary class="recipe-summary">
+                            Maträtt 1
+                            <div>
+                                <img src="assets/klocka.svg" alt="klocka">
+                                Under 30 min
+                                {{ time }}
+                            </div>
+                            <div>
+                                <img src="assets/level.svg" alt="komplexitet 2">
+                            </div>
+                            <div>
+                                {{ price }}
+                                140
+                                kr/p
+                            </div>
+                            <div>
+                                {{ margin }}
+                                30
+                                % VM
+                            </div>
+                        </summary>
+                        <div class="recipe-details">
+                            <img src="" alt="">
+                        </div>
+                    </details>
+
+                </div>
             </div>
         </main>
     </div>

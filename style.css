@@ -4,6 +4,22 @@ body {
     font-weight: 400;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    
+}
+
+button:hover {
+    filter: brightness(98%);
+  }
+
 #search-bar {
     display: flex;
     justify-content: center;
@@ -32,7 +48,7 @@ body {
     gap: 2.5rem;
 }
 
-#preference-container {
+.preference-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -145,4 +161,42 @@ body {
     border-radius: .625rem;
     margin: 0 auto;
     font-weight: bold;
+}
+
+#sorting-bar {
+    display: flex;
+}
+
+#sorting-button-container {
+    display: flex;
+    padding-left: 2rem;
+    gap: 1rem;
+}
+
+.sorting-button {
+    border: 0;
+    border-radius: .5rem;
+
+}
+
+.sorting-button:hover {
+    background-color: #E1E1E1;
+}
+
+/* Rather than using focus, we need a class that makes it change color until
+another button in the sorting row is pressed, we also need to change the image
+depending on clicks, click 1 is arrow down, click 2 is arrow up. */
+.sorting-button:focus {
+    background-color: #E1E1E1;
+}
+
+.recipe-summary {
+    display: flex;
+    background-color: #FCE1AF;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+
+    div {
+        align-items: baseline;
+    }
 }
