@@ -14,7 +14,7 @@ body {
     border-radius: 2rem;
 }
 
- input:focus {
+input:focus {
     border: none;
     outline: none;
 }
@@ -157,7 +157,7 @@ body {
     margin-bottom: 20px;
 }
 
-.range-input-container>.price-info> #price-tag {
+.range-input-container>.price-info>#price-tag {
     display: flex;
     width: 71px;
     height: 20px;
@@ -202,18 +202,60 @@ select {
     position: absolute;
     background: white;
     border: 1px solid #ccc;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     list-style: none;
     padding: 0;
     margin: 0;
     z-index: 10;
-  }
-  
-  .dropdown-item {
+}
+
+.dropdown-item {
     padding: 0.5em;
     cursor: pointer;
-  }
-  
-  .dropdown-item:hover {
+}
+
+.dropdown-item:hover {
     background-color: #f0f0f0;
-  }
+}
+
+.dropdown {
+    /* display: flex;
+    justify-content: flex-start; */
+    border: red 1px solid;
+
+}
+
+.dropdown-item {
+    display: flex;
+    border: red 1px solid;
+    margin: 0;
+    appearance: none;
+}
+
+#portion-count-container {
+    display: flex;
+}
+
+#portions {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+#checkboxes input {
+    width: 0.875rem;
+    height: 0.875rem;
+    aspect-ratio: 1/1;
+    border: 0.5px solid rgba(0, 0, 0, 0.50);
+}
+
+#portions input {
+    padding-left: 8px;
+    margin-top: 15px;
+    width: 80%;
+}
