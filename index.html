@@ -1,3 +1,193 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://unpkg.com/vue@3.5.13"
+        integrity="sha384-G++pO/TtP6SeNEBuO/CYuppmlcEhA0Rj9IcY5feVJXhyYraEA8CKVZV38iDXLTyJ"
+        crossorigin="anonymous"></script>
+    <script type="module" src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <main>
+            <div id="container">
+
+                <nav id="search-bar">
+                    <img src="assets/sök.svg" alt="magnifying glass">
+                    <input type="search" placeholder="Sök efter rätt...">
+                </nav>
+
+                <div class="preference-container">
+
+                    <white-block-component>
+                        <preference-component label="Måltidstyp" :data="mealTypeOptions">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @selected="onSelect"></dropdown-preference-component>
+                            </template>
+                        </preference-component>
+                    </white-block-component>
+
+
+                    <white-block-component>
+                        <preference-component label="Tema" :data="mealThemes">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @selected="onSelect"></dropdown-preference-component>
+                            </template>
+                        </preference-component>
+                    </white-block-component>
+
+                    <white-block-component>
+                        <preference-component label="Allergier" :data="allergies">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @selected="onSelect"></dropdown-preference-component>
+                            </template>
+                        </preference-component>
+                    </white-block-component>
+
+                    <white-block-component>
+                        <preference-component label="Kost" :data="diets">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @selected="onSelect"></dropdown-preference-component>
+                            </template>
+                        </preference-component>
+                    </white-block-component>
+
+
+                    <white-block-component>
+
+                        <slider-component label="Pris per portion: "> </slider-component>
+
+
+                    </white-block-component>
+
+                    <white-block-component>
+
+                        <div class="portion-count-container">
+                            <label for="portion-preference">Antal portioner:</label>
+                            <input type="text" id="portion-preference" class="small-searchfield" placeholder="Ange...">
+                            <label for="">Kan frysas</label>
+                            <input type="checkbox" class="portion-preference">
+                            <label for="">Kan förlagas</label>
+                            <input type="checkbox" class="portion-preference">
+
+                        </div>
+
+                    </white-block-component>
+
+                </div>
+
+                <div id="ingredients-container">
+
+                    <h4>Ingredienser</h4>
+
+                    <div class="preference-container">
+
+                        <white-block-component>
+                            <div>
+                                <preference-component label="Inkludera" id="include-ingredients-container">
+                                    <template v-slot:default="{ onSelect }">
+                                        <search-preference-component @keyword="onSelect" />
+                                    </template>
+                                </preference-component>
+                            </div>
+
+                        </white-block-component>
+
+                        <white-block-component>
+                            <div>
+                                <preference-component label="Exkludera" id="exclude-ingredients-container">
+                                    <template v-slot:default="{ onSelect }">
+                                        <search-preference-component @keyword="onSelect" />
+                                    </template>
+                                </preference-component>
+                            </div>
+                        </white-block-component>
+
+                    </div>
+                </div>
+
+                <button id="search-button">Starta sökning</button>
+            </div>
+            <div id="container">
+                <nav id="sorting-header">
+                    <div class="section-title">
+                        Sortera efter:
+                    </div>
+                    <div id="sorting-grid">
+                        <button class="sorting-button">
+                            Förberedningstid
+                            <img src="assets/sortera.svg" alt="sortera">
+                        </button>
+                        <button class="sorting-button">
+                            Komplexitet
+                            <img src="assets/sortera.svg" alt="sortera">
+                        </button>
+                        <button class="sorting-button">
+                            Pris
+                            <img src="assets/sortera.svg" alt="sortera">
+                        </button>
+                        <button class="sorting-button">
+                            Vinstmarginal
+                            <img src="assets/sortera.svg" alt="sortera">
+                        </button>
+                    </div>
+
+
+                </nav>
+
+                <div class="matching-recipes">
+                    <details class="recipe">
+                        <summary class="recipe-summary">
+                            <div class="section-title">
+                                Maträtt 1
+                            </div>
+                            <div id="summary-grid">
+                                <div>
+                                    <img src="assets/klocka.svg" alt="klocka">
+                                    Under 30 min
+                                    {{ time }}
+                                </div>
+                                <div>
+                                    <img src="assets/level.svg" alt="komplexitet 2">
+                                </div>
+                                <div>
+                                    {{ price }}
+                                    140
+                                    kr/p
+                                </div>
+                                <div>
+                                    {{ margin }}
+                                    30
+                                    % VM
+                                </div>
+                            </div>
+                        </summary>
+                        <div class="recipe-details">
+                            <img src="" alt="">
+                            These are the details for the recipe
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+=======
 <!DOCTYPE html>
 <html lang="en">
 
@@ -137,4 +327,5 @@
 
 </body>
 
+>>>>>>> e31c12cad640665758fd19dad556b84d99a0fd8d
 </html>
