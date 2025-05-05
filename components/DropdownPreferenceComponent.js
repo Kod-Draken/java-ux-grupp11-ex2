@@ -1,3 +1,4 @@
+
 export default {
     mounted() {
         console.log('Dropdown options:', this.options);
@@ -5,7 +6,7 @@ export default {
     props: ['options'],
     methods: {
         onSelect(event) {
-            this.$emit('selected', event.target.value)
+            this.$emit('select', event.target.value)
         },
     },
     template:

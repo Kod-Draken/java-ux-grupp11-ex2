@@ -11,6 +11,9 @@ export default {
                 return
             }
             this.selectedOptions.push(value)
+        },
+        removeOption(optionToRemove) {
+            this.selectedOptions = this.selectedOptions.filter(opt => opt !== optionToRemove)
         }
     },
     template: `
@@ -21,9 +24,9 @@ export default {
                 </div>
 
                 <div class="selected-option-container">
-                    <div class="selected-option" v-for="opt in selectedOptions">
+                    <div class="selected-option" v-for="opt in selectedOptions" :key="opt">
                         <label>{{ opt }}</label>
-                        <input class="remove-button" type="image" src="assets/close.svg" alt="remove">
+                        <input @click="removeOption(opt)" class="remove-button" type="image" src="assets/close.svg" alt="remove">
                     </div>
                 </div>
             </div>

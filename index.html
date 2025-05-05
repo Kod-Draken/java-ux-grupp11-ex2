@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -186,4 +187,145 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://unpkg.com/vue@3.5.13"
+        integrity="sha384-G++pO/TtP6SeNEBuO/CYuppmlcEhA0Rj9IcY5feVJXhyYraEA8CKVZV38iDXLTyJ"
+        crossorigin="anonymous"></script>
+    <script type="module" src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <main>
+            <div id="container">
+
+                <nav id="search-bar">
+                    <img src="assets/sök.svg" alt="magnifying glass">
+                    <input type="search" placeholder="Sök efter rätt...">
+                </nav>
+
+                <div id="preference-container">
+
+                    <white-block-component>
+                        <preference-component label="Måltidstyp" :data="mealTypeOptions">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @select="onSelect"></dropdown-preference-component>
+                            </template>
+                        </preference-component>
+                    </white-block-component>
+
+
+                    <white-block-component>
+                        <preference-component label="Tema" :data="mealThemes">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @select="onSelect"></dropdown-preference-component>
+                            </template>
+                        </preference-component>
+                    </white-block-component>
+
+                    <white-block-component>
+                        <preference-component label="Allergier" :data="allergies">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @select="onSelect"></dropdown-preference-component>
+                            </template>
+                        </preference-component>
+                    </white-block-component>
+
+                    <white-block-component>
+                        <preference-component label="Kost" :data="diets">
+                            <template v-slot:default="{ onSelect, options }">
+                                <dropdown-preference-component :options="options"
+                                    @select="onSelect"></dropdown-preference-component>
+                            </template>
+                        </preference-component>
+                    </white-block-component>
+
+
+                    <white-block-component>
+
+                        <slider-component label="Pris per portion: "> </slider-component>
+
+
+                    </white-block-component>
+
+                    <white-block-component>
+
+                        <div id="portion-count-container">
+
+                            <div id="portions">
+                                <label for="portion-preference">Antal portioner:</label>
+                                <input type="text" id="portion-preference" class="small-searchfield"
+                                    placeholder="Ange...">
+                            </div>
+
+                            <div id="checkboxes">
+
+                                <div id="frozen">
+                                    <input type="checkbox" class="portion-preference">
+                                    <label for="">Kan frysas</label>
+                                </div>
+
+                                <div id="precooked">
+                                    <input type="checkbox" class="portion-preference">
+                                    <label for="">Kan förlagas</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </white-block-component>
+
+                </div>
+
+                <div id="ingredients-container">
+
+                    <h4>Ingredienser</h4>
+
+                    <div id="temp-container">
+
+                        <white-block-component>
+                            <div>
+                                <preference-component label="Inkludera" id="include-ingredients-container">
+                                    <template v-slot:default="{ onSelect }">
+                                        <search-preference-component @keyword="onSelect" />
+                                    </template>
+                                </preference-component>
+                            </div>
+
+                        </white-block-component>
+
+                        <white-block-component>
+                            <div>
+                                <preference-component label="Exkludera" id="exclude-ingredients-container">
+                                    <template v-slot:default="{ onSelect }">
+                                        <search-preference-component @keyword="onSelect" />
+                                    </template>
+                                </preference-component>
+                            </div>
+                        </white-block-component>
+
+                    </div>
+                </div>
+
+                <button id="search-button">Starta sökning</button>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+>>>>>>> e31c12cad640665758fd19dad556b84d99a0fd8d
 </html>

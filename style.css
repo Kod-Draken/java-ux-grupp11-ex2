@@ -24,19 +24,20 @@ button:hover {
     display: flex;
     justify-content: center;
     background-color: #FFFFFF;
-    border: 0;
+    border: none;
     padding: .5rem 1rem;
     gap: 1rem;
     border-radius: 2rem;
 }
 
+input:focus {
+    border: none;
+    outline: none;
+}
+
 #search-bar input {
     border: 0;
     width: 100%;
-}
-
-#sear-bar input::before input::highlight {
-    border: 0;
 }
 
 #container {
@@ -203,6 +204,75 @@ button:hover {
     border-radius: 50px;
     background: #112643;
 
+}
+
+select {
+    appearance: none;
+    background-color: red;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+}
+
+.dropdown-list {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.dropdown-item {
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown {
+    /* display: flex;
+    justify-content: flex-start; */
+    border: red 1px solid;
+
+}
+
+.dropdown-item {
+    display: flex;
+    border: red 1px solid;
+    margin: 0;
+    appearance: none;
+}
+
+#portion-count-container {
+    display: flex;
+}
+
+#portions {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+#checkboxes input {
+    width: 0.875rem;
+    height: 0.875rem;
+    aspect-ratio: 1/1;
+    border: 0.5px solid rgba(0, 0, 0, 0.50);
+}
+
+#portions input {
+    padding-left: 8px;
+    margin-top: 15px;
+    width: 80%;
 }
 
 #sorting-header {
