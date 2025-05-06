@@ -8,10 +8,18 @@ import SearchResultComponent from './components/SearchResultComponent.js'
 const app = {
       data() {
             return {
+                  hideRecipes: true,
+
+
                   mealTypeOptions: ['Frukost', 'Lunch', 'Middag', 'Efterrätt'],
                   mealThemes: ['Grekisk', 'Indisk', 'Medelhavet', 'Husmanskost'],
                   allergies: ['Nötter', 'Bildäck', 'Laktos', 'Gluten'],
                   diets: ['Vegerarisk', 'Vegan', 'Plastdiet'],
+            }
+      },
+      methods: {
+            toggleShowRecipes() {
+                  this.hideRecipes = false;
             }
       }
 }

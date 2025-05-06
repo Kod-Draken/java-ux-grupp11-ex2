@@ -103,7 +103,7 @@
 
                     <h4>Ingredienser</h4>
 
-                    <div id="temp-container">
+                    <div id="preference-container">
 
                         <white-block-component>
                             <div>
@@ -129,9 +129,10 @@
                     </div>
                 </div>
 
-                <button id="search-button">Starta sökning</button>
+                <button @click="toggleShowRecipes" id="search-button">Starta sökning</button>
             </div>
-            <div class="container">
+
+            <div class="container result-container" :class="{ show: hideRecipes }">
                 <nav id="sorting-header">
                     <div class="section-title">
                         Sortera efter:
@@ -159,7 +160,9 @@
                 </nav>
                 
                 <div class="search-results">
-                    <search-result-component></search-result-component>
+                    <search-result-component>
+    
+                    </search-result-component>
                     <search-result-component></search-result-component>
                     <search-result-component></search-result-component>
                     <search-result-component></search-result-component>

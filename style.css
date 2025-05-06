@@ -1,7 +1,7 @@
 body {
     background-color: #F2F2F2;
     font-family: 'Inter', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 main {
@@ -285,6 +285,11 @@ select {
     font-size: small;
 }
 
+#summary-grid img {
+    height: auto;
+    width: 1rem;
+}
+
 #sorting-grid,
 #summary-grid {
     margin-left: 1rem;
@@ -308,17 +313,19 @@ select {
     gap: 0.5rem;
     cursor: pointer;
     font: inherit;
+    padding: .2rem;
+    border-radius: .5rem;
 }
 
 .sorting-button:hover {
-    background-color: #E1E1E1;
+    background-color: #d8d8d8;
 }
 
 /* Rather than using focus, we need a class that makes it change color until
 another button in the sorting row is pressed, we also need to change the image
 depending on clicks, click 1 is arrow down, click 2 is arrow up. */
 .sorting-button:focus {
-    background-color: #E1E1E1;
+    background-color: #D9D9D9;
 }
 
 .matching-recipes {
@@ -347,15 +354,16 @@ details[open] .arrow {
 .recipe-details {
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    gap: 2rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
 
     h5 {
         margin: 0;
         font-family: 'Inter', sans-serif;
-        font-weight: 300;
+        font-weight: bolder;
         font-size: 15px;
-        margin-top: 20px;
-        margin-bottom: 10px;
     }
 
     p {
@@ -370,33 +378,35 @@ details[open] .arrow {
     gap: 60px;
 }
 
-.recipe-details-col-1 {
+.recipe-details-col {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-}
 
-.recipe-details-col-2 {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-}
-
-.recipe-details-col-3 {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
+    gap: .5rem;
 }
 
 .recipe-details>#recipe-image {
-    margin-top: 25px;
+    
 }
 
-/* search-result-component {
-    gap: 30px;
-} */
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
 .view-recipe {
     height: auto;
     width: 1.875rem;
+    margin-left: 3rem;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.show {
+    display: none;
 }

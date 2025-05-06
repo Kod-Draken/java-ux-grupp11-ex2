@@ -15,7 +15,7 @@ export default {
         `
             <div class="small-searchfield">
                 <img src="assets/sök.svg" alt="magnifying glass">
-                <input type="search" placeholder="Sök..." @keyup.enter="addFilter" v-model="keyword">
+                <input type="search" placeholder="Sök..." @keyup.enter="addFilter" v-model="keyword" maxlength="25">
             </div>
   
           `

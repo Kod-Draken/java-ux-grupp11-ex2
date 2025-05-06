@@ -1,7 +1,7 @@
 
 
 export default {
-
+// template has both modular values (not used) and hard coded data
     template:
         `
                 <div class="matching-recipes">
@@ -39,7 +39,7 @@ export default {
                                 <img src="assets/unsplash_awj7sRviVXo.png" alt="">
                             </div>
                             <div class="column-groups">
-                                <div class="recipe-details-col-1">
+                                <div class="recipe-details-col">
                                     <div>
                                         <h5>Måltidstyp</h5>
                                         <p>Huvudrätt</p>
@@ -49,7 +49,7 @@ export default {
                                         <p>Skaldjur</p>
                                     </div>
                                 </div>
-                                <div class="recipe-details-col-2">
+                                <div class="recipe-details-col">
                                     <div>
                                         <h5>Tema</h5>
                                         <p>Havet</p>
@@ -59,7 +59,7 @@ export default {
                                         <p>Pesceterian</p>
                                     </div>
                                 </div>
-                                <div class="recipe-details-col-3">
+                                <div class="recipe-details-col">
                                     <div>
                                         <h5>Kan frysas</h5>
                                         <p>Ja</p>
