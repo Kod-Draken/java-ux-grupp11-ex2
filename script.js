@@ -3,6 +3,7 @@ import WhiteBlockComponent from './components/WhiteBlockComponent.js'
 import PreferenceComponent from './components/PreferenceComponent.js'
 import SearchPreferenceComponent from './components/SearchPreferenceComponent.js'
 import SliderComponent from './components/SliderComponent.js'
+import SearchResultComponent from './components/SearchResultComponent.js'
 
 const app = {
       data() {
@@ -11,8 +12,6 @@ const app = {
                   mealThemes: ['Grekisk', 'Indisk', 'Medelhavet', 'Husmanskost'],
                   allergies: ['Nötter', 'Bildäck', 'Laktos', 'Gluten'],
                   diets: ['Vegerarisk', 'Vegan', 'Plastdiet'],
-
-                  // sliderValue: 50
             }
       }
 }
@@ -24,5 +23,6 @@ vueApp.component('preference-component', PreferenceComponent)
 vueApp.component('dropdown-preference-component', DropdownPreferenceComponent)
 vueApp.component('search-preference-component', SearchPreferenceComponent)
 vueApp.component('slider-component', SliderComponent)
+vueApp.component('search-result-component', SearchResultComponent)
 
 vueApp.mount('#app')
